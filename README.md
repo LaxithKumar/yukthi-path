@@ -1,16 +1,79 @@
-# React + Vite
+# Yukthi Path
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium mobile learning application built with **React Native** and **Expo**.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Expo** (~53) — Managed React Native framework
+- **Expo Router** — File-based navigation
+- **React Native** — Cross-platform mobile UI
+- **JavaScript** — No TypeScript
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/) (v18+)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)
+- [Expo Go](https://expo.dev/go) on your phone (for testing)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+```bash
+npm install
+```
+
+### Running
+
+```bash
+npx expo start
+```
+
+Scan the QR code with **Expo Go** (Android) or the Camera app (iOS).
+
+## Project Structure
+
+```
+yukthi-path/
+├── app/                    # Expo Router screens & layouts
+│   ├── _layout.js          # Root layout
+│   └── (tabs)/             # Tab-based navigation
+│       ├── _layout.js      # Tab bar configuration
+│       ├── index.js        # Dashboard / Home
+│       ├── learn.js        # Course catalog
+│       ├── library.js      # Resources library
+│       ├── progress.js     # Learning analytics
+│       ├── profile.js      # User profile & settings
+│       ├── tutor.js        # AI Tutor
+│       ├── lab.js          # Virtual Lab
+│       ├── question-bank.js# Practice questions
+│       ├── paper-generator.js # Test paper builder
+│       └── recharge.js     # Break & relaxation
+├── components/             # Reusable UI components
+├── constants/              # Theme tokens & layout constants
+├── contexts/               # React contexts (ThemeContext)
+├── hooks/                  # Custom hooks
+├── styles/                 # Global shared styles
+├── utils/                  # Utility functions
+├── services/               # API services (placeholder)
+└── assets/                 # Images, fonts, icons
+```
+
+## Design System
+
+- **Theme**: Eye-friendly dark mode
+- **Palette**: Deep navy, soft blue, teal, slate, white
+- **Typography**: System fonts with a consistent type scale
+- **Components**: Card, Button, Header, ProgressBar, StatCard, and more
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npx expo start` | Start the dev server |
+| `npx expo start --android` | Open on Android |
+| `npx expo start --ios` | Open on iOS |
+
+## License
+
+Private — All rights reserved.
